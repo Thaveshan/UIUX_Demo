@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - SPCA - Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <img src="https://www.sandtonspca.org.za/wp-content/uploads/2022/06/Sandton-SPCA-300x86.jpg" alt="SPCA logo" id="logo">
+        <h1>Welcome to the Society for the Prevention of Cruelty to Animals</h1>
+        <h2>Working Together to Protect our Furry Friends</h2>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="contact.html" target="_blank">Contact Us</a>
+            </li>
+            <li>
+                <a href="what-we-do.html">What we Do</a>
+            </li>
+            <li>
+                <a href="sign-up.html">Sign-Up</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section>
+    
+        <h3>About Us</h3>
+        <p>The Sandton SPCA is one of over 90 societies in South Africa today. Each society is fully autonomous, having its own Non-Profit Organisation (NPO) number, operating in its own constitutional district and taking full responsibility for its own affairs. Each SPCA is a member of the National Councils of SPCAs (NSPCA) and is bound by the rules of the SPCA Act No. 169 of 1993. </p>
+        <img src="https://www.sandtonspca.org.za/wp-content/uploads/2022/06/Sandton-SPCA-Hero-Image.jpg"  width="550px"/>
+
+  
+        <h3>Animal Video</h3>
+        <video width="400" controls>
+            <source src="4106998-uhd_3840_2160_30fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+
+        <h3>The Five Freedoms</h3>
+        <ul>
+          <h4> We operate using the following guidelines: </h4> 
+         
+            <li>  <em>Freedom</em> from Hunger and Thirst – by providing ready access to fresh water and a diet to maintain full health and vigour.</li>
+            <li>  <em>Freedom</em> from Discomfort – by providing an appropriate environment including shelter and a comfortable resting place. </li>
+            <li>  <em>Freedom</em> from Pain, Injury or Disease – by prevention, by rapid diagnosis and treatment. </li>
+            <li>  <em>Freedom</em> to Express Normal Behaviour – by providing sufficient space, proper facilities and company of the animal’s own kind. </li>
+            <li>  <em>Freedom</em> from Fear and Distress – by ensuring conditions and treatment that avoid mental suffering. </li>
+        </ul>
+
+        <h3> Products Needed </h3>
+        <table>
+            <thead>
+                <tr>
+                    <th><strong>Number |</strong></th> 
+                    <th><strong>Description |</strong></th>
+                    <th><strong>Quantity Needed </strong></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Dog Food</td>
+                    <td>100 bags</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Cat Food</td>
+                    <td>100 bags</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Blankets</td>
+                    <td>250</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <p>
+            &copy; Society for the Prevention of Cruelty to Animals - &#174; SPCA
+        </p>
+        <p id="currentDate"></p>
+        <p id="currentTime"></p>
+    </footer>
+    
+    <script>
+        document.getElementById('currentDate').innerHTML = new Date().toLocaleDateString();
+    //update current time
+    function updateTime()
+    {
+        var now = new Date();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        var seconds = now.getSeconds();
+
+        document.getElementById('currentTime').innerHTML = hours + ":" + minutes + ":" + seconds;
+    }
+    
+    setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>

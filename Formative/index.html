@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - SPCA - Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <img src="https://www.sandtonspca.org.za/wp-content/uploads/2022/06/Sandton-SPCA-300x86.jpg" alt="SPCA logo" id="logo">
+        <h1>Welcome to the Society for the Prevention of Cruelty to Animals</h1>
+        <h2>Working Together to Protect our Furry Friends</h2>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="contact.html" target="_blank">Contact Us</a>
+            </li>
+            <li>
+                <a href="what-we-do.html">What we Do</a>
+            </li>
+            <li>
+                <a href="sign-up.html">Sign-Up</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section>
+        <p> At the <abbr title="Society for the Prevention of Cruelty to Animals">SPCA</abbr> we believe that animals, as living creatures, have a value beyond economic measurement and are entitled to legal, moral and ethical consideration and protection.<br><br>
+
+            Our aim is the prevention of cruelty to animals and to provide a place of safety and care for all animals in distress. <br><br>
+            SPCA work encompasses all animals, including wildlife, equine and farm animals, marine life and animals used for experimentation. <br><br>
+            <em> We are a non-profit organization not funded by the government and rely solely on the general public for financial support.<br><br>
+            </em>
+            
+            <br><br>
+
+            <img src="https://www.sandtonspca.org.za/wp-content/uploads/2022/06/Sandton-SPCA-Hero-Image.jpg"  width="550px"/>
+            </p>
+
+            <p>
+                <strong>Together</strong>, we can make a difference!
+            </p>
+    </section>
+
+    <footer>
+        <p>
+            &copy; Society for the Prevention of Cruelty to Animals - &#174; SPCA
+        </p>
+        <p id="currentDate"></p>
+        <p id="currentTime"></p>
+    </footer>
+    
+    <script>
+        document.getElementById('currentDate').innerHTML = new Date().toLocaleDateString();
+    //update current time
+    function updateTime()
+    {
+        var now = new Date();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        var seconds = now.getSeconds();
+
+        document.getElementById('currentTime').innerHTML = hours + ":" + minutes + ":" + seconds;
+    }
+    
+    setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>

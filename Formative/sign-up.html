@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - SPCA - Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <img src="https://www.sandtonspca.org.za/wp-content/uploads/2022/06/Sandton-SPCA-300x86.jpg" alt="SPCA logo" id="logo">
+        <h1>Welcome to the Society for the Prevention of Cruelty to Animals</h1>
+        <h2>Working Together to Protect our Furry Friends</h2>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="contact.html" target="_blank">Contact Us</a>
+            </li>
+            <li>
+                <a href="what-we-do.html">What we Do</a>
+            </li>
+            <li>
+                <a href="sign-up.html">Sign-Up</a>
+            </li>
+        </ul>
+    </nav>
+
+
+<section>
+    <h1>Sign-up</h1>
+    <form id="signupForm" action="contactformhandler.php" method="post">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" name="surname" required>
+        </div>
+        <div>
+            <label for="cellNumber">Cell number:</label>
+            <input type="tel" id="cellNumber" name="cellNumber" required>
+        </div>
+        <div class="interest-group">
+            <label>Interested in:</label><br>
+            <div>
+                <input type="radio" id="donate" name="interest" value="money">
+                <label for="donate">I would like to donate money</label><br>
+            </div>
+            <div>
+                <input type="radio" id="volunteer" name="interest" value="volunteer">
+                <label for="volunteer">I would like to volunteer at the SPCA</label>
+            </div>
+        </div>
+        <div>
+            <label for="dogBreed">Favorite dog breed:</label>
+            <select id="dogBreed" name="dogBreed">
+                <option value="labrador">Labrador</option>
+                <option value="poodle">Poodle</option>
+                <option value="germanshepherd">German Shepherd</option>
+                <option value="goldenretriever">Golden Retriever</option>
+                <option value="bulldog">Bulldog</option>
+            </select>
+        </div>
+        <div class="human-check">
+            <label>Am I human?</label><br>
+            <input type="checkbox" id="humanYes" name="human" value="yes">
+            <label for="humanYes">Yes</label><br>
+            <input type="checkbox" id="humanNo" name="human" value="no">
+            <label for="humanNo">No</label>
+        </div>
+        <button type="submit" onclick="submitForm()">OK</button>
+    </form>
+
+    <script>
+        function submitForm() {
+            alert("Thank you for your enquiry");
+            // Here you can add further functionality like sending data to a server
+        }
+    </script>
+</section>
+
+    
+
+    <footer>
+        <p>
+            &copy; Society for the Prevention of Cruelty to Animals - &#174; SPCA
+        </p>
+        <p id="currentDate"></p>
+        <p id="currentTime"></p>
+    </footer>
+    
+    <script>
+        document.getElementById('currentDate').innerHTML = new Date().toLocaleDateString();
+    //update current time
+    function updateTime()
+    {
+        var now = new Date();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        var seconds = now.getSeconds();
+
+        document.getElementById('currentTime').innerHTML = hours + ":" + minutes + ":" + seconds;
+    }
+    
+    setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>
